@@ -1,0 +1,8 @@
+<h1>Cineshelf</h1>
+<h2>My lists</h2>
+
+<% @lists.each do |list| %>
+  <%= render partial: "lists/list", locals: { list: list } %>
+<% end %>
+
+<%= link_to "New list", new_list_path, class: "btn btn-primary" %>
